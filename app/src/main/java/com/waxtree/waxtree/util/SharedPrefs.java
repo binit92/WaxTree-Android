@@ -31,7 +31,7 @@ public class SharedPrefs {
         edit.apply();
     }
 
-    public void getProperty(String key) {
-        sharedPreferences.getString(key, null);
+    public String getProperty(String key) {
+        return sharedPreferences.getString(key, null);
     }
 }

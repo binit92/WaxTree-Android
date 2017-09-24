@@ -8,6 +8,7 @@
     <string name="btnSignUp">signUp</string>
     <string name="btnSignIn">signIn</string>
     <string name="authFailed">User Authentication Failed </string>
+    <string name="authSuccess">User Authentication Successful</string>
 
 
 

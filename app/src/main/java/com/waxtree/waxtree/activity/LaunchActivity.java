@@ -44,6 +44,8 @@ public class LaunchActivity extends AppCompatActivity implements View.OnClickLis
     private FirebaseAuth.AuthStateListener mAuthListener;
 
     private final String TAG = LaunchActivity.class.getSimpleName();
+    private static final String LOGIN_EMAIL = "loginEmail";
+    private static final String LOGIN_PASSWORD = "loginPassword";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -68,6 +70,13 @@ public class LaunchActivity extends AppCompatActivity implements View.OnClickLis
                 }
             }
         };
+
+        // try automatic sign-in using saved credentials
+        String savedEmail = SharedPrefs.getInstance(getApplicationContext()).getProperty(LOGIN_EMAIL);
+        String savedPassword = SharedPrefs.getInstance(getApplicationContext()).getProperty(LOGIN_PASSWORD);
+        if(savedEmail!= null && !savedEmail.isEmpty() && savedPassword != null && !savedPassword.isEmpty()) {
+            signInExistingUser(savedEmail, savedPassword);
+        }
     }
 
 
@@ -104,7 +113,7 @@ public class LaunchActivity extends AppCompatActivity implements View.OnClickLis
                 });
     }
 
-    private void signInExistingUser(String email,String password){
+    private void signInExistingUser(final String email, final String password){
         mAuth.signInWithEmailAndPassword(email,password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -118,6 +127,11 @@ public class LaunchActivity extends AppCompatActivity implements View.OnClickLis
                             Log.w(TAG,"signInWithEmail:failed", task.getException());
                             Toast.makeText(LaunchActivity.this,R.string.authFailed, Toast.LENGTH_SHORT).show();
                         }else {
+
+                            Toast.makeText(LaunchActivity.this,R.string.authSuccess,Toast.LENGTH_SHORT).show();
+                            //On successful-login, save creds!
+                            SharedPrefs.getInstance(getApplicationContext()).setProperty("loginEmail",email);
+                            SharedPrefs.getInstance(getApplicationContext()).setProperty("loginPassword",password);
                             openMainActivity();
                         }
                     }
@@ -151,7 +165,7 @@ public class LaunchActivity extends AppCompatActivity implements View.OnClickLis
 
         //Todo : validate format
 
-        if(email!= null && !email.isEmpty() && password != null && !password.isEmpty()) {
+        if(email != null && !email.isEmpty() && password != null && !password.isEmpty()) {
             switch (view.getId()) {
                 case R.id.btnSignUp:
                     signUpNewUser(editEmail.getText().toString(), editPassword.getText().toString());
@@ -167,8 +181,6 @@ public class LaunchActivity extends AppCompatActivity implements View.OnClickLis
     private void openMainActivity(){
         String uid = accessSignedUserID();
         if(uid != null) {
-
-            SharedPrefs.getInstance(getApplicationContext()).setProperty("first-time-launce","true");
 
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             intent.putExtra("user-id", accessSignedUserID());
