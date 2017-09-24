@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">WaxTree</string>
+
+
+    <!-- Launch Activity -->
+    <string name="textEmail">Email</string>
+    <string name="textPassword">Password</string>
+    <string name="btnSignUp">signUp</string>
+    <string name="btnSignIn">signIn</string>
+    <string name="authFailed">User Authentication Failed </string>
+
+
+
 </resources>
