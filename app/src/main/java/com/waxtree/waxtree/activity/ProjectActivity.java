@@ -42,7 +42,7 @@ public class ProjectActivity extends AppCompatActivity {
 
             if(isTablet){
                 getSupportFragmentManager().beginTransaction()
-                        .add(R.id.projectDetailFragment,plf)
+                        .add(R.id.projectListFragment,plf)
                         .commit();
 
             }else{
