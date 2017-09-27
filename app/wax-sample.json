@@ -1,544 +1,442 @@
 {
-	"projects": {
-		"science" : {		
+	"projects": {				
 			"drone_tech" : {
 				"title": "Drone Tech",
 				"desc": " Open Source project for drones Improvement",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "01-01-2017",
 				"end_date" : "31-12-2017",
-				"email" : "drones@drones.com"
+				"email" : "drones@drones.com",
+				"type"  : "science"
 				
 			},
 			"cancer_research" : {
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "science"
 			},
 			"hyperloop_routes" : {
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "science"
+				
 			},
 			"meme-analyzer" : {
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "science"
 			},
 			"flying-cars" : {
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
-			}				
-		},
-		"programming" : {
+				"email" : "",
+				"type"  : "science"
+			},
+		
 			"lichess" : {
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "programming"
 			},
 			"CIFAR":{
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "programming"
 			},
 			"tensorflow_haskell":{
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "programming"
 			},
 			"elastic_search":{
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "programming"
 			},
 			"youtube-dl":{
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "programming"
 			},
 			"counter_strike_bot":{
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
-			}
-		},
-		"physics" : {
+				"email" : "",
+				"type"  : "programming"
+			},
 			
 			"frequency_dependent_sound_absorption" : {
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "physics"
 			},
 			"Investigating_the_mpemba_effect" : { 
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "chemistry"
 			},
 			"sugar_content_in_liquid_water" : {
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "chemistry"
 			},
 			"radio_active_particles_decay" : {
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "chemistry"
 			},
 			"rainbow_fire":{
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
-			}
+				"email" : "",
+				"type"  : "chemistry"
+			},
 				
-		},
-		"music" : {
 			"magenta" : {
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "music"
 			},
 			"comparing_vocal_ranges" : {
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "music"
 			},
 			"ding_dong_ding_dong" : {
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "music"
 			},
 			"musical_light_show" : {
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "music"
 			},
 			"the_alzheimer's_project" :{ 
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "music"
 			},
 			"reinventing_hell_cover":{
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
-			}
-		},
-		"chemistry" : {
+				"email" : "",
+				"type"  : "music"
+			},
 			"plastic_from_waste":{
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "social"
 			},
 			"bio_ethanol":{
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "social"
 			},
 			"nitrogen_complex_expansion":{
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
-			}
+				"email" : "",
+				"type"  : "datascience"
+			},
 			
-		},
-		"datascience" : {
 			"passenger_screening_algorithm":{
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "datascience"
 			},
 			"web_traffic_time_series_forecasting":{
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "datascience"
 			},
 			"text_normalization_challenge":{
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "datascience"
 			},
 			"personalized_medicine":{
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "datascience"
 			},
 			"housing_price":{
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "datascience"
 			},
 			"digit_recognizer":{
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
-			}
+				"email" : "",
+				"type"  : "datascience"
+			},
 		
-		},
-		"socialscience" : {
 			"global_village_construction_set": {
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "social"
 			},
 			"krochet_kids_peru":{
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "social"
 			},
 			"world_without_border":{
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
-			}
-		},
-		"cityplanning" : {
+				"email" : "",
+				"type"  : "social"
+			},
 			"hyderabad_house_planner" : {
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "social"
 			},
 			"unground_sewage_system" : {
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "social"
 			},
 			"yamuna_cleaning_project" :{
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
-			}
-		},
-		"psychology" : {
+				"email" : "",
+				"type"  : "social"
+			},
 			"selective_attention":{
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "pshycology"
 			},
 			"piono_stairs":{
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "pshycology"
 			},
 			"the_marshmallow_test":{
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "pshycology"
 			},
 			"robbers_cave_experiment":{
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "pshycology"
 			},
 			"contagious_yawning":{
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
+				"email" : "",
+				"type"  : "pshycology"
 			},
 			"the_halo_effect":{
 				"title": "",
 				"desc": "",
-				"links": [
-					"http://",
-					"http://"
-				],
+				"link": "www.",
 				"image" : "",
 				"start_date" : "",
 				"end_date" : "",
-				"email" : ""
-			}
-				
-		}
+				"email" : "",
+				"type"  : "pshycology"
+			}				
+		
  }
 }
