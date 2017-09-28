@@ -6,27 +6,28 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+import com.firebase.jobdispatcher.FirebaseJobDispatcher;
+import com.firebase.jobdispatcher.GooglePlayDriver;
+import com.firebase.jobdispatcher.Job;
+import com.firebase.jobdispatcher.Lifetime;
+import com.firebase.jobdispatcher.RetryStrategy;
+import com.firebase.jobdispatcher.Trigger;
 import com.waxtree.waxtree.R;
-import com.waxtree.waxtree.pojo.Project;
-import com.waxtree.waxtree.pojo.ProjectAttribute;
+import com.waxtree.waxtree.data.FirebaseTask;
+import com.waxtree.waxtree.scheduler.WaxJobService;
 import com.waxtree.waxtree.util.ICompletionCallback;
 import com.waxtree.waxtree.util.ProjectClassAdapter;
 
-import java.util.ArrayList;
-import java.util.List;
+import static com.waxtree.waxtree.data.FirebaseTask.allProjects;
 
 public class MainActivity extends AppCompatActivity implements ICompletionCallback {
 
     private static final String TAG = MainActivity.class.getSimpleName();
+    FirebaseTask firebaseTask;
 
-    FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+  /*  FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     DatabaseReference mProjectsRef = null;
-    static List<Project> allProjects = new ArrayList<>();
+    static List<Project> allProjects = new ArrayList<>();*/
 
     /*@BindView(R.id.projectClassGrid)*/
     RecyclerView projectClassView;
@@ -36,26 +37,44 @@ public class MainActivity extends AppCompatActivity implements ICompletionCallba
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        firebaseTask = FirebaseTask.getInstance(getApplicationContext());
         //ButterKnife.bind(this);
 
-        firebaseDatabase.setPersistenceEnabled(true);
-        mProjectsRef = firebaseDatabase.getReference().child("projects");
+   /*     firebaseDatabase.setPersistenceEnabled(true);
+        mProjectsRef = firebaseDatabase.getReference().child("projects");*/
+
 
         projectClassView = (RecyclerView) findViewById(R.id.projectClassGrid);
         projectClassView.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
         projectClassView.setClickable(true);
 
         try {
-            getProjectsFromDB(this);
+            firebaseTask.getProjectsFromDB(this);
 
         }catch (Throwable t){
             t.printStackTrace();
         }
 
+
+        FirebaseJobDispatcher dispatcher = new FirebaseJobDispatcher(new GooglePlayDriver(getApplicationContext()));
+
+        //scheduling automatic sync of projects
+        Job dataSync = dispatcher.newJobBuilder()
+                .setService(WaxJobService.class)  // The Job Service that will be called
+                .setTag(getString(R.string.app_name)) // uniquely identifies the Job
+                .setRecurring(false) //on-off Job
+                .setLifetime(Lifetime.UNTIL_NEXT_BOOT) //don't persist past a device reboot
+                .setTrigger(Trigger.executionWindow(6000,12000)) // starts between 100 to 200 minutes from now
+                .setReplaceCurrent(true)
+                .setRetryStrategy(RetryStrategy.DEFAULT_EXPONENTIAL) // retry with exponential backoff
+                .build();
+        dispatcher.mustSchedule(dataSync);
+
     }
 
 
-    private void getProjectsFromDB(final ICompletionCallback completionCallback){
+    /*private void getProjectsFromDB(final ICompletionCallback completionCallback){
         mProjectsRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -79,6 +98,8 @@ public class MainActivity extends AppCompatActivity implements ICompletionCallba
 
         });
     }
+*/
+
 
 
 

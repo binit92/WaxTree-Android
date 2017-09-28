@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.waxtree.waxtree.R;
+import com.waxtree.waxtree.data.FirebaseTask;
 import com.waxtree.waxtree.pojo.Project;
 
 import java.util.ArrayList;
@@ -55,8 +56,8 @@ public class ProjectActivity extends AppCompatActivity {
 
     // List all the projects from a projectclass
     void getProjectsOfSpecifiedClass(String projectClass){
-        for(int i=0; i< MainActivity.allProjects.size();i++){
-            Project p = MainActivity.allProjects.get(i);
+        for(int i = 0; i< FirebaseTask.allProjects.size(); i++){
+            Project p = FirebaseTask.allProjects.get(i);
             if(p.getProjectAttribute().getType().equals(projectClass)){
                 listedProject.add(p);
             }
