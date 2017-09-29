@@ -30,6 +30,11 @@
             </intent-filter>
         </service>
 
+        <provider
+            android:name="com.waxtree.projectprovider.ProjectProvider"
+            android:authorities="com.waxtree.projectprovider"
+            android:exported="false" />
+
     </application>
 
 </manifest>
