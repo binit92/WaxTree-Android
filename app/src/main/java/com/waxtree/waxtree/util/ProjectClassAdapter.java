@@ -49,7 +49,7 @@ public class ProjectClassAdapter extends RecyclerView.Adapter<ProjectClassAdapte
     }
 
     @Override
-    public void onBindViewHolder(ProjectClassAdapter.ViewHolder holder,  int position) {
+    public void onBindViewHolder(ProjectClassAdapter.ViewHolder holder, final int position) {
         // Get the data model based on position
         final String projectClass = projectClasses.get(position);
 
@@ -59,9 +59,16 @@ public class ProjectClassAdapter extends RecyclerView.Adapter<ProjectClassAdapte
 
             @Override
             public void onClick(View view) {
+
                 Intent intent = new Intent(context, ProjectActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.putExtra("project-class",projectClass);
+                if(position == 0){
+                    // load favorites projects from local db
+                    intent.putExtra("position", position);
+                    intent.putExtra("project-class",context.getString(R.string.Favorites));
+                }else{
+                    intent.putExtra("project-class", projectClass);
+                }
                 context.startActivity(intent);
             }
         });
@@ -75,6 +82,7 @@ public class ProjectClassAdapter extends RecyclerView.Adapter<ProjectClassAdapte
 
     List<String> getProjectClasses(List<Project> allProjects){
         List<String> projectClasses = new ArrayList<>();
+        projectClasses.add(context.getString(R.string.Favorites));
         for(int i=0; i<allProjects.size();i++){
             Project p = allProjects.get(i);
             String projectClass = p.getProjectAttribute().getType();

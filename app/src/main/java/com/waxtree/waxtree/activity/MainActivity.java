@@ -25,11 +25,7 @@ public class MainActivity extends AppCompatActivity implements ICompletionCallba
     private static final String TAG = MainActivity.class.getSimpleName();
     FirebaseTask firebaseTask;
 
-  /*  FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-    DatabaseReference mProjectsRef = null;
-    static List<Project> allProjects = new ArrayList<>();*/
 
-    /*@BindView(R.id.projectClassGrid)*/
     RecyclerView projectClassView;
     ProjectClassAdapter projectClassAdapter;
 
@@ -39,10 +35,6 @@ public class MainActivity extends AppCompatActivity implements ICompletionCallba
         setContentView(R.layout.activity_main);
 
         firebaseTask = FirebaseTask.getInstance(getApplicationContext());
-        //ButterKnife.bind(this);
-
-   /*     firebaseDatabase.setPersistenceEnabled(true);
-        mProjectsRef = firebaseDatabase.getReference().child("projects");*/
 
 
         projectClassView = (RecyclerView) findViewById(R.id.projectClassGrid);
@@ -72,35 +64,6 @@ public class MainActivity extends AppCompatActivity implements ICompletionCallba
         dispatcher.mustSchedule(dataSync);
 
     }
-
-
-    /*private void getProjectsFromDB(final ICompletionCallback completionCallback){
-        mProjectsRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and gain
-                // whenever data at this location is updated
-
-                for (DataSnapshot projectClassDataSnapshot : dataSnapshot.getChildren()) {
-                    String projectName = projectClassDataSnapshot.getKey();
-                    ProjectAttribute projectAttribute = projectClassDataSnapshot.getValue(ProjectAttribute.class);
-                    allProjects.add(new Project(projectName,projectAttribute));
-                }
-                completionCallback.onCompletionCallback(true);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                // Failed to read value
-                Log.w(TAG,"Failed to read value.", databaseError.toException());
-
-            }
-
-        });
-    }
-*/
-
-
 
 
     @Override

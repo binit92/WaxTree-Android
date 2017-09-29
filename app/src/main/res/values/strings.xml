@@ -19,4 +19,6 @@
     <string name="email">Email</string>
     <string name="type">Type</string>
 
+    <string name="Favorites">Favorites</string>
+
 </resources>

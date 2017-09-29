@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.waxtree.waxtree.R;
 import com.waxtree.waxtree.data.FirebaseTask;
+import com.waxtree.waxtree.data.QueryLibrary;
 import com.waxtree.waxtree.pojo.Project;
 
 import java.util.ArrayList;
@@ -26,8 +27,15 @@ public class ProjectActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.project_activity);
 
+        String projectClass;
         Intent i = getIntent();
-        String projectClass = i.getStringExtra("project-class");
+        int pos = i.getIntExtra("position",-1);
+        if(pos == 0){
+            projectClass = getString(R.string.Favorites);
+
+        }else {
+            projectClass = i.getStringExtra("project-class");
+        }
 
         if(projectClass!= null && !projectClass.isEmpty()){
             getProjectsOfSpecifiedClass(projectClass);
@@ -56,11 +64,22 @@ public class ProjectActivity extends AppCompatActivity {
 
     // List all the projects from a projectclass
     void getProjectsOfSpecifiedClass(String projectClass){
-        for(int i = 0; i< FirebaseTask.allProjects.size(); i++){
-            Project p = FirebaseTask.allProjects.get(i);
-            if(p.getProjectAttribute().getType().equals(projectClass)){
-                listedProject.add(p);
+
+        if(projectClass!= null && !projectClass.isEmpty()){
+            if(projectClass.equals(getString(R.string.Favorites))){
+                //Get from DB
+              new QueryLibrary(getApplicationContext()).getAllData(listedProject);
+
+            }else{
+                for(int i = 0; i< FirebaseTask.allProjects.size(); i++){
+                    Project p = FirebaseTask.allProjects.get(i);
+                    if(p.getProjectAttribute().getType().equals(projectClass)){
+                        listedProject.add(p);
+                    }
+                }
             }
         }
     }
+
+
 }
