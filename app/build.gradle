@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         config {
-            keyAlias 'marimba1#'
+            keyAlias 'key0'
             keyPassword 'marimba1#'
             storeFile file("$rootDir/release-keys.jks")
             storePassword 'marimba1#'
