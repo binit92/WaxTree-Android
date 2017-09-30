@@ -5,7 +5,7 @@ android {
         config {
             keyAlias 'marimba1#'
             keyPassword 'marimba1#'
-            storeFile file('C:/Users/inbkumar01/Documents/GitHub/WaxTree-Android/release-keys.jks')
+            storeFile file("$rootDir/release-keys.jks")
             storePassword 'marimba1#'
         }
     }
@@ -23,6 +23,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
     }
 }
