@@ -13,7 +13,7 @@ public final class ProjectDatabase {
     public static final int VERSION = 1;
 
     @Table(ProjectColumns.class)
-    public static final String PROJECTS= "projects";
+    public static final String PROJECTS = "projects";
 
 }
 

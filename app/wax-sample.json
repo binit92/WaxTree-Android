@@ -1,442 +1,434 @@
 {
-	"projects": {				
-			"drone_tech" : {
-				"title": "Drone Tech",
-				"desc": " Open Source project for drones Improvement",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "01-01-2017",
-				"end_date" : "31-12-2017",
-				"email" : "drones@drones.com",
-				"type"  : "science"
-				
-			},
-			"cancer_research" : {
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "science"
-			},
-			"hyperloop_routes" : {
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "science"
-				
-			},
-			"meme-analyzer" : {
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "science"
-			},
-			"flying-cars" : {
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "science"
-			},
-		
-			"lichess" : {
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "programming"
-			},
-			"CIFAR":{
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "programming"
-			},
-			"tensorflow_haskell":{
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "programming"
-			},
-			"elastic_search":{
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "programming"
-			},
-			"youtube-dl":{
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "programming"
-			},
-			"counter_strike_bot":{
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "programming"
-			},
-			
-			"frequency_dependent_sound_absorption" : {
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "physics"
-			},
-			"Investigating_the_mpemba_effect" : { 
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "chemistry"
-			},
-			"sugar_content_in_liquid_water" : {
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "chemistry"
-			},
-			"radio_active_particles_decay" : {
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "chemistry"
-			},
-			"rainbow_fire":{
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "chemistry"
-			},
-				
-			"magenta" : {
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "music"
-			},
-			"comparing_vocal_ranges" : {
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "music"
-			},
-			"ding_dong_ding_dong" : {
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "music"
-			},
-			"musical_light_show" : {
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "music"
-			},
-			"the_alzheimer's_project" :{ 
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "music"
-			},
-			"reinventing_hell_cover":{
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "music"
-			},
-			"plastic_from_waste":{
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "social"
-			},
-			"bio_ethanol":{
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "social"
-			},
-			"nitrogen_complex_expansion":{
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "datascience"
-			},
-			
-			"passenger_screening_algorithm":{
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "datascience"
-			},
-			"web_traffic_time_series_forecasting":{
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "datascience"
-			},
-			"text_normalization_challenge":{
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "datascience"
-			},
-			"personalized_medicine":{
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "datascience"
-			},
-			"housing_price":{
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "datascience"
-			},
-			"digit_recognizer":{
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "datascience"
-			},
-		
-			"global_village_construction_set": {
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "social"
-			},
-			"krochet_kids_peru":{
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "social"
-			},
-			"world_without_border":{
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "social"
-			},
-			"hyderabad_house_planner" : {
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "social"
-			},
-			"unground_sewage_system" : {
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "social"
-			},
-			"yamuna_cleaning_project" :{
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "social"
-			},
-			"selective_attention":{
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "pshycology"
-			},
-			"piono_stairs":{
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "pshycology"
-			},
-			"the_marshmallow_test":{
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "pshycology"
-			},
-			"robbers_cave_experiment":{
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "pshycology"
-			},
-			"contagious_yawning":{
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "pshycology"
-			},
-			"the_halo_effect":{
-				"title": "",
-				"desc": "",
-				"link": "www.",
-				"image" : "",
-				"start_date" : "",
-				"end_date" : "",
-				"email" : "",
-				"type"  : "pshycology"
-			}				
-		
- }
+  "projects": {
+    "drone_tech": {
+      "title": "Drone Tech",
+      "desc": " Open Source project for drones Improvement",
+      "link": "www.",
+      "image": "",
+      "start_date": "01-01-2017",
+      "end_date": "31-12-2017",
+      "email": "drones@drones.com",
+      "type": "science"
+    },
+    "cancer_research": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "science"
+    },
+    "hyperloop_routes": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "science"
+    },
+    "meme-analyzer": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "science"
+    },
+    "flying-cars": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "science"
+    },
+    "lichess": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "programming"
+    },
+    "CIFAR": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "programming"
+    },
+    "tensorflow_haskell": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "programming"
+    },
+    "elastic_search": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "programming"
+    },
+    "youtube-dl": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "programming"
+    },
+    "counter_strike_bot": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "programming"
+    },
+    "frequency_dependent_sound_absorption": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "physics"
+    },
+    "Investigating_the_mpemba_effect": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "chemistry"
+    },
+    "sugar_content_in_liquid_water": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "chemistry"
+    },
+    "radio_active_particles_decay": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "chemistry"
+    },
+    "rainbow_fire": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "chemistry"
+    },
+    "magenta": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "music"
+    },
+    "comparing_vocal_ranges": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "music"
+    },
+    "ding_dong_ding_dong": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "music"
+    },
+    "musical_light_show": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "music"
+    },
+    "the_alzheimer's_project": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "music"
+    },
+    "reinventing_hell_cover": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "music"
+    },
+    "plastic_from_waste": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "social"
+    },
+    "bio_ethanol": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "social"
+    },
+    "nitrogen_complex_expansion": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "datascience"
+    },
+    "passenger_screening_algorithm": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "datascience"
+    },
+    "web_traffic_time_series_forecasting": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "datascience"
+    },
+    "text_normalization_challenge": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "datascience"
+    },
+    "personalized_medicine": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "datascience"
+    },
+    "housing_price": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "datascience"
+    },
+    "digit_recognizer": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "datascience"
+    },
+    "global_village_construction_set": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "social"
+    },
+    "krochet_kids_peru": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "social"
+    },
+    "world_without_border": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "social"
+    },
+    "hyderabad_house_planner": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "social"
+    },
+    "unground_sewage_system": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "social"
+    },
+    "yamuna_cleaning_project": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "social"
+    },
+    "selective_attention": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "pshycology"
+    },
+    "piono_stairs": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "pshycology"
+    },
+    "the_marshmallow_test": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "pshycology"
+    },
+    "robbers_cave_experiment": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "pshycology"
+    },
+    "contagious_yawning": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "pshycology"
+    },
+    "the_halo_effect": {
+      "title": "",
+      "desc": "",
+      "link": "www.",
+      "image": "",
+      "start_date": "",
+      "end_date": "",
+      "email": "",
+      "type": "pshycology"
+    }
+  }
 }

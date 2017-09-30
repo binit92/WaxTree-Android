@@ -17,19 +17,19 @@ public class ProjectAttribute implements Parcelable {
     String email;
     String type;
 
-    public ProjectAttribute(){
+    public ProjectAttribute() {
 
     }
 
-    public ProjectAttribute(String title,String desc,String link,String image,String startDate,String endDate,String email,String type){
+    public ProjectAttribute(String title, String desc, String link, String image, String startDate, String endDate, String email, String type) {
         this.title = title;
-        this.desc =desc;
+        this.desc = desc;
         this.link = link;
-        this.image=image;
-        this.start_date=startDate;
-        this.end_date=endDate;
-        this.email=email;
-        this.type=type;
+        this.image = image;
+        this.start_date = startDate;
+        this.end_date = endDate;
+        this.email = email;
+        this.type = type;
 
     }
 
@@ -65,7 +65,9 @@ public class ProjectAttribute implements Parcelable {
         this.image = image;
     }
 
-    public String getStartDate() { return start_date; }
+    public String getStartDate() {
+        return start_date;
+    }
 
     public void setStartDate(String startDate) {
         this.start_date = startDate;
@@ -112,6 +114,7 @@ public class ProjectAttribute implements Parcelable {
         parcel.writeString(this.email);
         parcel.writeString(this.type);
     }
+
     protected ProjectAttribute(Parcel in) {
         this.title = in.readString();
         this.desc = in.readString();

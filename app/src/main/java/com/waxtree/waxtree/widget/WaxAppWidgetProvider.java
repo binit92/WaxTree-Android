@@ -68,26 +68,26 @@ public class WaxAppWidgetProvider extends AppWidgetProvider {
         super.onReceive(context, intent);
     }
 
-    private static RemoteViews getProjectListView(Context context){
+    private static RemoteViews getProjectListView(Context context) {
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_provider);
 
-        Intent intent = new Intent(context,WaxAppRemoteViewService.class);
-        views.setRemoteAdapter(R.id.widgetList ,intent);
+        Intent intent = new Intent(context, WaxAppRemoteViewService.class);
+        views.setRemoteAdapter(R.id.widgetList, intent);
 
-        Intent ingredientIntent = new Intent(context,WaxAppRemoteViewService.class);
+        Intent ingredientIntent = new Intent(context, WaxAppRemoteViewService.class);
         PendingIntent ingredientPendingIntent = PendingIntent.getActivity(
                 context,
                 0,
                 ingredientIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT
         );
-        views.setPendingIntentTemplate(R.id.widgetList,ingredientPendingIntent);
+        views.setPendingIntentTemplate(R.id.widgetList, ingredientPendingIntent);
 
         // Launch Details Activity ..
         Intent detailsIntent = new Intent(context, ProjectActivity.class);
         detailsIntent.setAction("LAUNCH_ACTIVITY");
-        PendingIntent pi = PendingIntent.getActivity(context,0,detailsIntent,PendingIntent.FLAG_UPDATE_CURRENT);
-        views.setOnClickPendingIntent(R.id.projectName,pi);
+        PendingIntent pi = PendingIntent.getActivity(context, 0, detailsIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        views.setOnClickPendingIntent(R.id.projectName, pi);
 
         return views;
     }

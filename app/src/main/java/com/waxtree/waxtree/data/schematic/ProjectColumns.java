@@ -13,9 +13,10 @@ import static net.simonvt.schematic.annotation.DataType.Type.TEXT;
 
 public interface ProjectColumns {
 
-    @DataType(INTEGER) @PrimaryKey
+    @DataType(INTEGER)
+    @PrimaryKey
     @AutoIncrement
-    String  _ID  = "_id";
+    String _ID = "_id";
 
     @DataType(TEXT)
     String TITLE = "title";
@@ -30,13 +31,13 @@ public interface ProjectColumns {
     String IMAGE = "image";
 
     @DataType(TEXT)
-    String START_DATE ="start_date";
+    String START_DATE = "start_date";
 
     @DataType(TEXT)
-    String END_DATE ="end_date";
+    String END_DATE = "end_date";
 
     @DataType(TEXT)
-    String EMAIL= "email";
+    String EMAIL = "email";
 
     @DataType(TEXT)
     String TYPE = "type";

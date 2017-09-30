@@ -28,8 +28,8 @@ import java.util.List;
 
 /**
  * Created by inbkumar01 on 9/28/2017.
- *
- *  Firebase Authentication and Real Time Database
+ * <p>
+ * Firebase Authentication and Real Time Database
  */
 
 public class FirebaseTask {
@@ -49,16 +49,16 @@ public class FirebaseTask {
 
     Context context;
 
-    private FirebaseTask(Context context){
+    private FirebaseTask(Context context) {
         this.context = context;
         init();
     }
 
-    public static FirebaseTask getInstance(Context context){
+    public static FirebaseTask getInstance(Context context) {
         return new FirebaseTask(context);
     }
 
-    public void init(){
+    public void init() {
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -66,12 +66,12 @@ public class FirebaseTask {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
-                if(user != null){
+                if (user != null) {
                     // User is signed in
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
-                }else{
+                } else {
                     // User is signed out
-                    Log.d(TAG, "onAuthStateChanged:signed_out:" );
+                    Log.d(TAG, "onAuthStateChanged:signed_out:");
                 }
             }
         };
@@ -80,76 +80,76 @@ public class FirebaseTask {
         mProjectsRef = firebaseDatabase.getReference().child("projects");
     }
 
-    public void addAuthListener(){
-        if(mAuth != null) {
+    public void addAuthListener() {
+        if (mAuth != null) {
             mAuth.addAuthStateListener(mAuthListener);
         }
     }
 
-    public void removeAuthListener(){
-        if(mAuth != null) {
+    public void removeAuthListener() {
+        if (mAuth != null) {
             if (mAuthListener != null) {
                 mAuth.removeAuthStateListener(mAuthListener);
             }
         }
     }
 
-    public void signUpNewUser(String email, String password){
+    public void signUpNewUser(String email, String password) {
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        Log.d(TAG,"createUserWithEmail:onComplete:" + task.isSuccessful());
+                        Log.d(TAG, "createUserWithEmail:onComplete:" + task.isSuccessful());
 
                         //If sign in fails, display a message to the user, If sign in succeeds
                         // the auth state listener will be notified and logic to handle the
                         // signed in user can be handled in the listener
-                        if(!task.isSuccessful()){
-                            Toast.makeText(context, R.string.authFailed,Toast.LENGTH_SHORT).show();
-                        }else{
+                        if (!task.isSuccessful()) {
+                            Toast.makeText(context, R.string.authFailed, Toast.LENGTH_SHORT).show();
+                        } else {
                             openMainActivity();
                         }
                     }
                 });
     }
 
-    public void signInExistingUser(final String email, final String password){
-        mAuth.signInWithEmailAndPassword(email,password)
-                .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
+    public void signInExistingUser(final String email, final String password) {
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        Log.d(TAG,"signInWithEmail:onComplete:" + task.isSuccessful());
+                        Log.d(TAG, "signInWithEmail:onComplete:" + task.isSuccessful());
 
                         //If sign in fails, display a message to the user. If sign in succeeds
                         // the authe sate listener will be notified and logic to handle the
                         // signed in user can be handled in the listener
-                        if(!task.isSuccessful()){
-                            Log.w(TAG,"signInWithEmail:failed", task.getException());
+                        if (!task.isSuccessful()) {
+                            Log.w(TAG, "signInWithEmail:failed", task.getException());
                             Toast.makeText(context, R.string.authFailed, Toast.LENGTH_SHORT).show();
-                        }else {
+                        } else {
 
-                            Toast.makeText(context,R.string.authSuccess,Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, R.string.authSuccess, Toast.LENGTH_SHORT).show();
                             //On successful-login, save creds!
-                            SharedPrefs.getInstance(context).setProperty("loginEmail",email);
-                            SharedPrefs.getInstance(context).setProperty("loginPassword",password);
+                            SharedPrefs.getInstance(context).setProperty("loginEmail", email);
+                            SharedPrefs.getInstance(context).setProperty("loginPassword", password);
                             openMainActivity();
                         }
                     }
                 });
     }
 
-    public void tryAutomaticSignIn(){
+    public void tryAutomaticSignIn() {
         // try automatic sign-in using saved credentials
         String savedEmail = SharedPrefs.getInstance(context).getProperty(LOGIN_EMAIL);
         String savedPassword = SharedPrefs.getInstance(context).getProperty(LOGIN_PASSWORD);
-        if(savedEmail!= null && !savedEmail.isEmpty() && savedPassword != null && !savedPassword.isEmpty()) {
+        if (savedEmail != null && !savedEmail.isEmpty() && savedPassword != null && !savedPassword.isEmpty()) {
             signInExistingUser(savedEmail, savedPassword);
         }
     }
 
-    private void openMainActivity(){
+    private void openMainActivity() {
         String uid = accessSignedUserID();
-        if(uid != null) {
+        if (uid != null) {
 
             Intent intent = new Intent(context, MainActivity.class);
             intent.putExtra("user-id", accessSignedUserID());
@@ -159,10 +159,10 @@ public class FirebaseTask {
     }
 
 
-    private String accessSignedUserID(){
+    private String accessSignedUserID() {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String uid = null;
-        if(user != null){
+        if (user != null) {
             // Name, email address, and profile photo url
             // String name = user.getDisplayName();
             String email = user.getEmail();
@@ -172,13 +172,13 @@ public class FirebaseTask {
             // authenticate with your backend server, if you have one. Use
             // FirebaseUser.getToken() instead.
             uid = user.getUid();
-            Log.d(TAG,"email : "+ email + " , user-id :"+ uid);
+            Log.d(TAG, "email : " + email + " , user-id :" + uid);
         }
         return uid;
     }
 
 
-    public void getProjectsFromDB(final ICompletionCallback completionCallback){
+    public void getProjectsFromDB(final ICompletionCallback completionCallback) {
         mProjectsRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -188,9 +188,9 @@ public class FirebaseTask {
                 for (DataSnapshot projectClassDataSnapshot : dataSnapshot.getChildren()) {
                     String projectName = projectClassDataSnapshot.getKey();
                     ProjectAttribute projectAttribute = projectClassDataSnapshot.getValue(ProjectAttribute.class);
-                    allProjects.add(new Project(projectName,projectAttribute));
+                    allProjects.add(new Project(projectName, projectAttribute));
                 }
-                if(completionCallback != null) {
+                if (completionCallback != null) {
                     completionCallback.onCompletionCallback(true);
                 }
             }
@@ -198,7 +198,7 @@ public class FirebaseTask {
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 // Failed to read value
-                Log.w(TAG,"Failed to read value.", databaseError.toException());
+                Log.w(TAG, "Failed to read value.", databaseError.toException());
 
             }
 

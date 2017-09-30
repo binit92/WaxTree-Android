@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme"
         android:name="com.waxtree.waxtree.data.WaxTreeApp">
 
-        <activity android:name=".activity.MainActivity"/>
+        <activity android:name=".activity.MainActivity" />
 
         <activity android:name=".activity.LaunchActivity">
             <intent-filter>
@@ -25,12 +25,12 @@
                 <action android:name="LAUNCH_ACTIVITY" />
             </intent-filter>
         </activity>
-        
+
         <service
             android:name=".scheduler.WaxJobService"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE"/>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
             </intent-filter>
         </service>
 
@@ -51,7 +51,7 @@
 
         <service
             android:name=".widget.WaxAppRemoteViewService"
-            android:permission="android.permission.BIND_REMOTEVIEWS"/>
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
 
     </application>
 

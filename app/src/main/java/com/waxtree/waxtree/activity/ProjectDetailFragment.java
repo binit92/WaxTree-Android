@@ -69,17 +69,17 @@ public class ProjectDetailFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.project_detail_fragment,container,false);
-        ButterKnife.bind(this,rootView);
+        rootView = inflater.inflate(R.layout.project_detail_fragment, container, false);
+        ButterKnife.bind(this, rootView);
 
         Bundle b = getArguments();
 
-        if(rootView != null){
+        if (rootView != null) {
             Project project = b.getParcelable("project");
-            if(project != null) {
+            if (project != null) {
 
                 ProjectAttribute pr = project.getProjectAttribute();
-                if(pr != null) {
+                if (pr != null) {
                     prTitle = getVal(pr.getTitle());
                     prDesc = getVal(pr.getDesc());
                     prLink = getVal(pr.getLink());
@@ -105,28 +105,28 @@ public class ProjectDetailFragment extends Fragment {
                 new MaterialFavoriteButton.OnFavoriteChangeListener() {
                     @Override
                     public void onFavoriteChanged(MaterialFavoriteButton buttonView, boolean favorite) {
-                        if(favorite){
+                        if (favorite) {
                             // Add everything to database
                             ContentValues projectContent = new ContentValues();
-                            projectContent.put(ProjectColumns.TITLE,prTitle);
-                            projectContent.put(ProjectColumns.DESC,prDesc);
-                            projectContent.put(ProjectColumns.LINK,prLink);
-                            projectContent.put(ProjectColumns.IMAGE,prLink);
-                            projectContent.put(ProjectColumns.START_DATE,prStartDate);
-                            projectContent.put(ProjectColumns.END_DATE,prEndDate);
-                            projectContent.put(ProjectColumns.EMAIL,prEmail);
-                            projectContent.put(ProjectColumns.TYPE,prType);
+                            projectContent.put(ProjectColumns.TITLE, prTitle);
+                            projectContent.put(ProjectColumns.DESC, prDesc);
+                            projectContent.put(ProjectColumns.LINK, prLink);
+                            projectContent.put(ProjectColumns.IMAGE, prLink);
+                            projectContent.put(ProjectColumns.START_DATE, prStartDate);
+                            projectContent.put(ProjectColumns.END_DATE, prEndDate);
+                            projectContent.put(ProjectColumns.EMAIL, prEmail);
+                            projectContent.put(ProjectColumns.TYPE, prType);
 
                             if (!checkIfProjectExists()) {
                                 Uri insertedUri = getContext().getContentResolver().insert(
-                                        ProjectProvider.Projects.PROJECTS,projectContent);
+                                        ProjectProvider.Projects.PROJECTS, projectContent);
                                 // The inserted URI contains the id for the row.
                                 // Extract the movie ID from the Uri
                                 // long insertedid = ContentUris.parseId(insertedUri);
                                 buttonView.setAnimateFavorite(true);
                                 // Todo : Add Trailers and Reviews too!
                             }
-                        }else{
+                        } else {
                             getContext().getContentResolver().delete(
                                     ProjectProvider.Projects.PROJECTS,
                                     ProjectColumns.TITLE + "=?", new String[]{prTitle});
@@ -134,25 +134,25 @@ public class ProjectDetailFragment extends Fragment {
                     }
                 });
 
-        return  rootView;
+        return rootView;
     }
 
-    String getVal(String s){
-        if(s ==null && s.isEmpty()){
-            return s;
-        }else{
+    String getVal(String s) {
+        if(s!=null && !s.isEmpty()){
             return "unknown";
+        }else {
+            return s;
         }
     }
 
-    boolean checkIfProjectExists(){
+    boolean checkIfProjectExists() {
         Cursor checkProject = getContext().getContentResolver()
                 .query(ProjectProvider.Projects.PROJECTS
                         , new String[]{ProjectColumns.TITLE}
-                        , ProjectColumns.TITLE+ "=?"
+                        , ProjectColumns.TITLE + "=?"
                         , new String[]{prTitle}
                         , null);
-        if(checkProject != null && checkProject.moveToFirst()){
+        if (checkProject != null && checkProject.moveToFirst()) {
             return true;
         }
         return false;

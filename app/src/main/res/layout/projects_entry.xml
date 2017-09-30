@@ -13,7 +13,7 @@
         android:padding="@dimen/project_class_textview_padding"
         android:background="#FFFFFF"
         android:focusable="true"
-        android:clickable="true"/>
+        android:clickable="true" />
 
 
 </LinearLayout>

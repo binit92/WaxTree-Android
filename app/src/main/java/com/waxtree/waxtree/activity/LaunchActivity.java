@@ -17,7 +17,7 @@ import butterknife.ButterKnife;
  * Created by inbkumar01 on 9/24/2017.
  */
 
-public class LaunchActivity extends AppCompatActivity implements View.OnClickListener{
+public class LaunchActivity extends AppCompatActivity implements View.OnClickListener {
 
     @BindView(R.id.editEmail)
     EditText editEmail;
@@ -31,7 +31,7 @@ public class LaunchActivity extends AppCompatActivity implements View.OnClickLis
     @BindView(R.id.btnSignIn)
     Button btnSignIn;
 
-    FirebaseTask firebaseTask ;
+    FirebaseTask firebaseTask;
     private final String TAG = LaunchActivity.class.getSimpleName();
     private static final String LOGIN_EMAIL = "loginEmail";
     private static final String LOGIN_PASSWORD = "loginPassword";
@@ -67,13 +67,13 @@ public class LaunchActivity extends AppCompatActivity implements View.OnClickLis
         String password = editPassword.getText().toString();
 
 
-        if(email != null && !email.isEmpty() && password != null && !password.isEmpty()) {
-           switch (view.getId()) {
+        if (email != null && !email.isEmpty() && password != null && !password.isEmpty()) {
+            switch (view.getId()) {
                 case R.id.btnSignUp:
                     firebaseTask.signUpNewUser(editEmail.getText().toString(), editPassword.getText().toString());
                     break;
 
-            case R.id.btnSignIn:
+                case R.id.btnSignIn:
                     firebaseTask.signInExistingUser(editEmail.getText().toString(), editPassword.getText().toString());
                     break;
             }

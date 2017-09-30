@@ -21,12 +21,12 @@ public class WaxAppRemoteViewFactory implements RemoteViewsService.RemoteViewsFa
     List<Project> listedProject = new ArrayList<>();
     Context context;
 
-    public  WaxAppRemoteViewFactory(Context c){
+    public WaxAppRemoteViewFactory(Context c) {
         context = c;
         getData();
     }
 
-    public void getData(){
+    public void getData() {
         new QueryLibrary(context).getAllData(listedProject);
     }
 
@@ -52,10 +52,10 @@ public class WaxAppRemoteViewFactory implements RemoteViewsService.RemoteViewsFa
 
     @Override
     public RemoteViews getViewAt(int i) {
-        Log.v(context.getClass().getSimpleName(), "pos: "+ i);
+        Log.v(context.getClass().getSimpleName(), "pos: " + i);
 
         RemoteViews rv = new RemoteViews(context.getPackageName(), R.layout.widget_item);
-        rv.setTextViewText(R.id.projectName,listedProject.get(i).getProjectName());
+        rv.setTextViewText(R.id.projectName, listedProject.get(i).getProjectName());
 
 
         return rv;

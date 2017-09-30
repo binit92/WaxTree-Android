@@ -38,13 +38,13 @@ public class MainActivity extends AppCompatActivity implements ICompletionCallba
 
 
         projectClassView = (RecyclerView) findViewById(R.id.projectClassGrid);
-        projectClassView.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
+        projectClassView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2));
         projectClassView.setClickable(true);
 
         try {
             firebaseTask.getProjectsFromDB(this);
 
-        }catch (Throwable t){
+        } catch (Throwable t) {
             t.printStackTrace();
         }
 
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements ICompletionCallba
                 .setTag(getString(R.string.app_name)) // uniquely identifies the Job
                 .setRecurring(false) //on-off Job
                 .setLifetime(Lifetime.UNTIL_NEXT_BOOT) //don't persist past a device reboot
-                .setTrigger(Trigger.executionWindow(6000,12000)) // starts between 100 to 200 minutes from now
+                .setTrigger(Trigger.executionWindow(6000, 12000)) // starts between 100 to 200 minutes from now
                 .setReplaceCurrent(true)
                 .setRetryStrategy(RetryStrategy.DEFAULT_EXPONENTIAL) // retry with exponential backoff
                 .build();
@@ -68,8 +68,8 @@ public class MainActivity extends AppCompatActivity implements ICompletionCallba
 
     @Override
     public void onCompletionCallback(boolean isComplete) {
-        Log.d(TAG,"Total number of Projects read : " + allProjects.size());
-        projectClassAdapter = new ProjectClassAdapter(getApplicationContext(),allProjects,MainActivity.this);
+        Log.d(TAG, "Total number of Projects read : " + allProjects.size());
+        projectClassAdapter = new ProjectClassAdapter(getApplicationContext(), allProjects, MainActivity.this);
         projectClassView.setAdapter(projectClassAdapter);
     }
 }

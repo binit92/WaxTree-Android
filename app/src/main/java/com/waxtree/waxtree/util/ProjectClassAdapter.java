@@ -27,7 +27,7 @@ public class ProjectClassAdapter extends RecyclerView.Adapter<ProjectClassAdapte
     private ICompletionCallback callback;
     private static final String TAG = ProjectClassAdapter.class.getSimpleName();
 
-    public ProjectClassAdapter(Context context, List<Project> projects, ICompletionCallback callback){
+    public ProjectClassAdapter(Context context, List<Project> projects, ICompletionCallback callback) {
         this.context = context;
         this.projects = projects;
         this.projectClasses = getProjectClasses(projects);
@@ -37,11 +37,11 @@ public class ProjectClassAdapter extends RecyclerView.Adapter<ProjectClassAdapte
     // Usually involves inflating a layout from XML and returning the holder
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        Context c  = parent.getContext();
+        Context c = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(c);
 
         //Inflate the custom layout
-        View projectClassName = inflater.inflate(R.layout.project_class_entry,parent,false);
+        View projectClassName = inflater.inflate(R.layout.project_class_entry, parent, false);
 
         // Return a new holder instance
         ViewHolder viewHolder = new ProjectClassAdapter.ViewHolder(projectClassName);
@@ -62,11 +62,11 @@ public class ProjectClassAdapter extends RecyclerView.Adapter<ProjectClassAdapte
 
                 Intent intent = new Intent(context, ProjectActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                if(position == 0){
+                if (position == 0) {
                     // load favorites projects from local db
                     intent.putExtra("position", position);
-                    intent.putExtra("project-class",context.getString(R.string.Favorites));
-                }else{
+                    intent.putExtra("project-class", context.getString(R.string.Favorites));
+                } else {
                     intent.putExtra("project-class", projectClass);
                 }
                 context.startActivity(intent);
@@ -80,22 +80,22 @@ public class ProjectClassAdapter extends RecyclerView.Adapter<ProjectClassAdapte
     }
 
 
-    List<String> getProjectClasses(List<Project> allProjects){
+    List<String> getProjectClasses(List<Project> allProjects) {
         List<String> projectClasses = new ArrayList<>();
         projectClasses.add(context.getString(R.string.Favorites));
-        for(int i=0; i<allProjects.size();i++){
+        for (int i = 0; i < allProjects.size(); i++) {
             Project p = allProjects.get(i);
             String projectClass = p.getProjectAttribute().getType();
 
             //Iterate to see projectClass exists in list
             boolean found = false;
-            for(int j=0;j<projectClasses.size();j++){
-                if(projectClasses.get(j).equals(projectClass)){
+            for (int j = 0; j < projectClasses.size(); j++) {
+                if (projectClasses.get(j).equals(projectClass)) {
                     found = true;
                     break;
                 }
             }
-            if(!found) {
+            if (!found) {
                 projectClasses.add(projectClass);
             }
         }
@@ -109,6 +109,7 @@ public class ProjectClassAdapter extends RecyclerView.Adapter<ProjectClassAdapte
         // for any view that will be set as you render a row
 
         TextView projectClassTextView;
+
         // We also create a constructor that accepts the entire item row
         // and does the view lookups to find each subview
         public ViewHolder(View itemView) {

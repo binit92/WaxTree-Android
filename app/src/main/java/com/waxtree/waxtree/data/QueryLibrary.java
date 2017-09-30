@@ -16,16 +16,17 @@ import java.util.List;
 public class QueryLibrary {
 
     Context context;
-    public QueryLibrary(Context context){
+
+    public QueryLibrary(Context context) {
         this.context = context;
     }
 
-    public void getAllData(List<Project> listOfProject){
+    public void getAllData(List<Project> listOfProject) {
         try {
             Cursor checkProject = context.getContentResolver()
                     .query(ProjectProvider.Projects.PROJECTS, null, null, null, null);
 
-            while (checkProject.moveToNext()){
+            while (checkProject.moveToNext()) {
                 ProjectAttribute pr = new ProjectAttribute(
                         checkProject.getString(checkProject.getColumnIndex("title")),
                         checkProject.getString(checkProject.getColumnIndex("desc")),
@@ -36,15 +37,13 @@ public class QueryLibrary {
                         checkProject.getString(checkProject.getColumnIndex("email")),
                         checkProject.getString(checkProject.getColumnIndex("type")));
 
-                listOfProject.add(new Project(pr.getTitle(),pr));
+                listOfProject.add(new Project(pr.getTitle(), pr));
             }
             checkProject.close();
-        }catch (Throwable t){
+        } catch (Throwable t) {
             t.printStackTrace();
         }
     }
-
-
 
 
 }

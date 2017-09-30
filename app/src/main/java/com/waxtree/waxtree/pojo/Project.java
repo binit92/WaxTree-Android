@@ -12,9 +12,10 @@ public class Project implements Parcelable {
     String projectName;
     ProjectAttribute projectAttribute;
 
-    public Project(){}
+    public Project() {
+    }
 
-    public Project(String projectName, ProjectAttribute projectAttribute){
+    public Project(String projectName, ProjectAttribute projectAttribute) {
         this.projectName = projectName;
         this.projectAttribute = projectAttribute;
     }

@@ -14,17 +14,17 @@ import net.simonvt.schematic.annotation.TableEndpoint;
         authority = ProjectProvider.AUTHORITY,
         database = ProjectDatabase.class,
         packageName = "com.waxtree.projectprovider")
-public final class ProjectProvider{
+public final class ProjectProvider {
 
     public static final String AUTHORITY = "com.waxtree.projectprovider";
 
     @TableEndpoint(table = ProjectDatabase.PROJECTS)
-    public static class Projects{
+    public static class Projects {
 
         @ContentUri(path = "projects",
                 type = "vnd.android.cursor.dir/projects",
                 defaultSort = ProjectColumns.TITLE + " ASC")
-        public static final Uri PROJECTS = Uri.parse("content://"+AUTHORITY+"/projects");
+        public static final Uri PROJECTS = Uri.parse("content://" + AUTHORITY + "/projects");
     }
 }
 

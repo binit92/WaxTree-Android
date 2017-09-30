@@ -15,13 +15,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:text="@string/title"/>
+            android:text="@string/title" />
 
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
     </LinearLayout>
 
@@ -34,6 +34,7 @@
             android:id="@+id/favorite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/Favorites"
             app:mfb_animate_favorite="true"
             app:mfb_animate_unfavorite="false"
             app:mfb_padding="12"
@@ -42,7 +43,7 @@
             app:mfb_bounce_duration="300"
             app:mfb_color="black"
             app:mfb_type="star"
-            app:mfb_size="48"/>
+            app:mfb_size="48" />
 
     </LinearLayout>
 
@@ -55,13 +56,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/type"
-            android:layout_weight="3"/>
+            android:layout_weight="3" />
 
         <TextView
             android:id="@+id/type"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
     </LinearLayout>
 
@@ -75,7 +76,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:text="@string/desc"/>
+            android:text="@string/desc" />
 
         <TextView
             android:id="@+id/desc"
@@ -94,7 +95,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:text="@string/link"/>
+            android:text="@string/link" />
 
         <TextView
             android:id="@+id/link"
@@ -113,7 +114,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:text="@string/image"/>
+            android:text="@string/image" />
 
         <TextView
             android:id="@+id/image"
@@ -132,7 +133,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:text="@string/start_date"/>
+            android:text="@string/start_date" />
 
         <TextView
             android:id="@+id/start_date"
@@ -151,7 +152,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:text="@string/end_date"/>
+            android:text="@string/end_date" />
 
         <TextView
             android:id="@+id/end_date"
@@ -170,7 +171,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:text="@string/email"/>
+            android:text="@string/email" />
 
         <TextView
             android:id="@+id/email"

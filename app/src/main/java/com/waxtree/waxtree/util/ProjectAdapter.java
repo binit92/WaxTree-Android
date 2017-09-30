@@ -22,9 +22,9 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ViewHold
     List<Project> listOfProjects;
     private IProjectSelectCallback callback;
 
-    public ProjectAdapter(Context context, List<Project>listOfProjects,IProjectSelectCallback callback){
+    public ProjectAdapter(Context context, List<Project> listOfProjects, IProjectSelectCallback callback) {
         this.context = context;
-        this.listOfProjects= listOfProjects;
+        this.listOfProjects = listOfProjects;
         this.callback = callback;
     }
 
@@ -34,7 +34,7 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ViewHold
         LayoutInflater inflater = LayoutInflater.from(context);
 
         // Inflate the custom layout
-        View projectNameView = inflater.inflate(R.layout.projects_entry,parent,false);
+        View projectNameView = inflater.inflate(R.layout.projects_entry, parent, false);
 
         // Return a new viewholder instance
         ProjectAdapter.ViewHolder viewHolder = new ProjectAdapter.ViewHolder(projectNameView);
@@ -45,7 +45,7 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ViewHold
     public void onBindViewHolder(ProjectAdapter.ViewHolder holder, final int position) {
         final Project project = listOfProjects.get(position);
 
-        TextView textView  = holder.projectName;
+        TextView textView = holder.projectName;
         textView.setText(project.getProjectName());
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +67,7 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ViewHold
         // Your holder should contain a member variable
         // for any view that will be set as you render a row
         TextView projectName;
+
         // We also create a constructor that accepts the entire item row
         // and does the view lookups to find each subview
         public ViewHolder(View itemView) {

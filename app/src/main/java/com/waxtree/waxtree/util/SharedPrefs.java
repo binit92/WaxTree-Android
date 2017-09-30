@@ -12,22 +12,22 @@ public class SharedPrefs {
 
     private SharedPreferences sharedPreferences;
     private static final String PREFS_NAME = SharedPrefs.class.getCanonicalName();
-    private static SharedPrefs preferences ;
+    private static SharedPrefs preferences;
 
-    private SharedPrefs(Context context){
-        sharedPreferences = context.getSharedPreferences(PREFS_NAME,Context.MODE_PRIVATE);
+    private SharedPrefs(Context context) {
+        sharedPreferences = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
     }
 
-    public static SharedPrefs getInstance(Context context){
-        if(preferences ==null){
+    public static SharedPrefs getInstance(Context context) {
+        if (preferences == null) {
             preferences = new SharedPrefs(context);
         }
         return preferences;
     }
 
-    public void setProperty(String key, String value){
+    public void setProperty(String key, String value) {
         Editor edit = sharedPreferences.edit();
-        edit.putString(key,value);
+        edit.putString(key, value);
         edit.apply();
     }
 
